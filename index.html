@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IMDbClone</title>
+
+    <!-- font-awesom link -->
+    <script
+      src="https://kit.fontawesome.com/6f38b70ccc.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- here i add  css style sheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="main">
+      <!-- header containing logo, search bar, and relevant buttons -->
+      <div id="header">
+        <div>
+          <div id="logo">
+            <img src="https://designshack.net/wp-content/uploads/batman-dawn-of-justice-logo-template.jpg" alt="Logo" />
+          </div>
+          <div id="back-to-home">
+            <i class="fas fa-home"></i>
+          </div>
+        </div>
+
+        <div id="search-bar">
+          <div class="wrapper">
+            <div id="search-area">
+              <input
+                type="text"
+                name="searchMovie"
+                id="searchMovie"
+                placeholder="Search..."
+                autocomplete="off"
+              />
+              <button><i class="fa fa-search"></i></button>
+            </div>
+
+            <div class="results">
+              <ul>
+                <li>test</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div id="extra-buttons">
+          <button id="top-kids-rated">Animation Movies</button>
+          <!-- populating years in drop down using js -->
+          <select id="best-of-year">
+            <option value="" disabled selected>Best of Year</option>
+          </select>
+          <!-- <option value="best-of-year">Best of Year</option> -->
+          <button id="my-list">
+            <a href="./myListPage.html">Favourites List</a>
+          </button>
+        </div>
+      </div>
+
+      <div id="page-heading">
+        <!-- <hr> -->
+        Best Popular Movies
+        <!-- <hr> -->
+      </div>
+
+      <!-- container containing all movie elements | will be populated by js -->
+      <div id="movie-container">
+        <!-- each movie element -->
+        <div class="movie-element">
+          <div class="movie-poster">
+            <a href="#"
+              ><img src="images\sample_movie_poster.jpg" alt="Movie Poster"
+            /></a>
+          </div>
+          <div class="movie-title">Spider Man: No Way Home</div>
+          <div class="movie-element-tags">
+            <div class="movie-rating">8.2 <i class="fas fa-star"></i></div>
+            <div class="add-movie-to-list">
+              <i class="fas fa-plus" onclick=""></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="toasts">
+        <div class="toast">Added to list</div>
+      </div>
+
+      <!-- adding buttons to navigate between pages -->
+      <div class="page-navigation">
+        <button id="prev-page">< Prevrious</button>
+        <button id="next-page">Next ></button>
+      </div>
+    </div>
+
+    <!-- javascript file for this page -->
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

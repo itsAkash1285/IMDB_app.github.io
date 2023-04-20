@@ -1,0 +1,135 @@
+body {
+	padding: 0px;
+	margin: 0px;
+	background-image: url("images/body_background.png");
+  }
+  #heading {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+  
+	width: 95%;
+	padding: 20px 50px;
+	color: white;
+	font-size: 5rem;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+	  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+	  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	font-weight: 100;
+	position: fixed;
+	background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 250%);
+  }
+  #btns {
+	padding-right: 40px;
+  }
+  #btns button,
+  #btns button a {
+	border: none;
+	background: none;
+	color: white;
+	font-size: 1.2rem;
+  }
+  
+  #btns button:hover,
+  #btns button a {
+	color: #db393c;
+	text-decoration: underline;
+  }
+  
+  #list-container {
+	padding-top: 150px;
+  }
+  /* each list item */
+  .list-item {
+	height: 80px;
+	margin: 30px 50px;
+	padding-bottom: 5px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 2px solid white;
+  }
+  
+  .remove-movie {
+	color: white;
+	font-size: 1.2rem;
+	margin-right: 30px;
+	cursor: pointer;
+  }
+  .remove-movie:hover {
+	transform: scale(0.95);
+	color: grey;
+  }
+  
+  .movie-details {
+	display: flex;
+	align-items: center;
+  }
+  .thumbnail {
+	width: 50px;
+	height: 75px;
+  }
+  .thumbnail img {
+	width: 100%;
+	height: 100%;
+	min-width: 50px;
+  }
+  .title {
+	margin-left: 20px;
+  }
+  .title a {
+	color: white;
+	font-family: monospace;
+	font-size: 1.5rem;
+	font-weight: bolder;
+	/* transition: all 0.2s ease-in-out; */
+  }
+  .title a {
+	color: #db393c;
+	font-size: 1.4rem;
+	text-decoration: underline;
+  }
+  .title span {
+	color: white;
+	font-family: monospace;
+	font-size: 1.2rem;
+  }
+  
+  /* responsiveness and media queries */
+  @media screen and (max-width: 550px) {
+	.list-item {
+	  height: 100px;
+	  margin: 30px 30px;
+	  padding-bottom: 5px;
+	}
+  }
+  
+  @media screen and (max-width: 460px) {
+	.list-item {
+	  height: 110px;
+	  margin: 30px 30px;
+	  padding-bottom: 5px;
+	}
+	#heading {
+	  font-size: 4rem;
+	  padding: 20px 30px;
+	}
+	#btns {
+	  padding-right: 30px;
+	}
+  }
+  @media screen and (max-width: 400px) {
+	.list-item {
+	  height: 120px;
+	  margin: 20px 20px;
+	  padding-bottom: 5px;
+	}
+	#heading {
+	  font-size: 3.5rem;
+	  padding: 20px 20px;
+	}
+	#btns {
+	  padding-right: 20px;
+	}
+  }
+  

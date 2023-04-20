@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "react-toast-notifications": "^2.5.1"
+  }
+}

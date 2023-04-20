@@ -1,0 +1,287 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	background-image: url("images/body_background.png");
+	background-repeat: repeat-y;
+	background-size: cover;
+	background-attachment: fixed;
+  }
+  
+  /* header section */
+  #header {
+	position: fixed;
+	width: 100%;
+	padding: 5px 0px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: black;
+	z-index: 10;
+  }
+  #logo {
+	margin: 0px 20px;
+	width: 254px;
+	height: 60px;
+  }
+  #logo img {
+	width: 100%;
+	height: 100%;
+	min-width: 150px;
+	cursor: pointer;
+  }
+  
+  #back-to-home {
+	position: absolute;
+	margin-left: 25px;
+	top: 70px;
+	display: none;
+  }
+  #back-to-home i {
+	color: grey;
+	font-size: 1.5rem;
+  }
+  #logo:hover + #back-to-home {
+	display: block;
+  }
+  
+  /* search bar */
+  #search-bar {
+	width: 40%;
+  }
+  .wrapper {
+	/* max-width: 1000px;
+	  width: 40vw; */
+	width: 100%;
+	padding: 10px;
+	border-radius: 10px;
+	padding: 5px 15px;
+	/* position: fixed;
+	  left: 25%; */
+	background-color: white;
+	top: 15px;
+  }
+  #search-area {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  }
+  
+  #search-area input {
+	width: 100%;
+	font-size: 1.2rem;
+	border: none;
+  }
+  #search-area input:focus {
+	outline: none;
+  }
+  #search-area button {
+	background: none;
+	border: none;
+	color: black;
+	font-size: 1rem;
+  }
+  /* display area of the suggestion box */
+  .results {
+	padding: 0px;
+	max-height: 600px;
+	overflow-y: scroll;
+  }
+  .results ul {
+	padding: 0px;
+	margin: 0px;
+  }
+  .results ul li {
+	list-style: none;
+	padding: 5px 15px;
+	opacity: 0;
+	display: none;
+	border-radius: 3px;
+	transition: all 0.5s linear;
+  }
+  
+  .show .results ul li {
+	opacity: 1;
+	display: block;
+  }
+  .show .results {
+	padding: 10px;
+  }
+  .results ul li:hover {
+	background: #ececec;
+  }
+  
+  /* header buttons */
+  #extra-buttons {
+	display: flex;
+	justify-content: space-around;
+	margin: 0px 20px;
+  }
+  #extra-buttons button {
+	border: none;
+	color: white;
+	background: none;
+	font-size: 1rem;
+	cursor: pointer;
+	padding: 0px 20px;
+  }
+  #extra-buttons select {
+	background: none;
+	color: white;
+	border: none;
+	font-size: 1rem;
+  }
+  #extra-buttons button:hover,
+  #extra-buttons select:hover {
+	color: #db393c;
+	text-decoration: underline;
+  }
+  #extra-buttons select option {
+	color: white;
+	background: black;
+	font-size: 1rem;
+  }
+  #my-list a {
+	text-decoration: none;
+	color: inherit;
+  }
+  
+  /* page heading styling */
+  #page-heading {
+	padding-top: 60px;
+	color: white;
+	font-size: 5rem;
+	text-align: center;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+	  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+	  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	font-weight: 100;
+  }
+  
+  /* container having all the movie elements */
+  #movie-container {
+	margin: auto;
+	width: 80%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+  }
+  .movie-element {
+	margin: 20px;
+  }
+  .movie-poster {
+	height: 265px;
+	width: 170px;
+  }
+  .movie-poster :hover {
+	transform: scale(1.1);
+  }
+  .movie-poster img {
+	width: 100%;
+	height: 100%;
+	transition: all 0.2s ease-in;
+  }
+  .movie-title{
+	max-width: 165px;
+	margin: 5px;
+	text-align: center;
+	color: black;
+	font-size: 1.3rem;
+	font-family: monospace;
+  }
+  .movie-element-tags {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+  }
+  .movie-rating,
+  .add-movie-to-list {
+	color: rgb(190, 24, 24);
+	font-size: 1.2rem;
+  }
+  .movie-rating i {
+	color: gold;
+  }
+  .add-movie-to-list:hover {
+	color: #db393c;
+  }
+  
+  /* toast message styling */
+  #toasts {
+	display: none;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	align-items: flex-end;
+  }
+  .toast {
+	color: white;
+	background-color: rgb(49, 47, 47);
+	font-size: 1.2rem;
+	padding: 10px 30px;
+	margin: 10px;
+	border-radius: 10px;
+	text-align: end;
+  }
+  
+  .page-navigation {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 20px;
+  }
+  .page-navigation button {
+	background: none;
+	color: red;
+	font-size: 1rem;
+	padding: 10px 20px;
+	margin: 10px;
+	border-radius: 10px;
+  }
+  
+  /* responsiveness and media queries */
+  @media screen and (max-width: 950px) {
+	#logo {
+	  width: 200px;
+	  height: auto;
+	}
+  }
+  
+  @media screen and (max-width: 700px) {
+	#header {
+	  flex-direction: column;
+	}
+	#page-heading {
+	  padding-top: 140px;
+	}
+	#extra-buttons {
+	  margin: 10px;
+	}
+	#search-bar {
+	  margin: 10px;
+	}
+	#back-to-home {
+	  top: 15px;
+	  left: 15px;
+	  margin: 0;
+	}
+  }
+  @media screen and (max-width: 700px) {
+	#page-heading {
+	  font-size: 4rem;
+	}
+  }
+  @media screen and (max-width: 550px) {
+	#page-heading {
+	  font-size: 4.5rem;
+	  padding-top: 140px;
+	}
+	.page-navigation {
+	  flex-direction: column;
+	}
+  }
+  @media screen and (max-width: 380px) {
+	#page-heading {
+	  padding-top: 150px;
+	}
+  }
+  

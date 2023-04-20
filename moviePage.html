@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Page</title>
+    <!-- font-awesom link -->
+    <script
+      src="https://kit.fontawesome.com/6f38b70ccc.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- css sheet link -->
+    <link rel="stylesheet" href="moviePageStyle.css" />
+  </head>
+  <body>
+    <div id="main">
+      <div id="movie-display">
+        <!-- complete below div will be populated via js for different movies -->
+        <!-- starts here -->
+        <div class="each-movie-page">
+          <div class="movie-poster">
+            <img src="images\wait_for_poster.png" alt="Poster" />
+          </div>
+          <!-- movie details section containing title, rating, IMDB rating, Actors, Plot etc -->
+          <div class="movie-details">
+            <div class="title">Movie Title</div>
+            <div class="tagline">Tagline</div>
+
+            <div style="display: flex">
+              <div class="movie-duration">
+                <i class="fas fa-clock"></i> 00 min
+              </div>
+              <div class="release_date">Released: N/A</div>
+            </div>
+
+            <div class="rating">IMDb Rating: ..</div>
+
+            <div class="trailer-div" id="trailer-div-btn">
+              <i class="fab fa-youtube"></i>
+            </div>
+
+            <div id="trailer-video-div">
+              <!-- // button to close mini player -->
+              <button id="remove-video-player">
+                <i class="fas fa-times"></i>
+              </button>
+              <!-- in this region, we will display the embeded video from yt -->
+              <span></span>
+            </div>
+
+            <h2>Plot</h2>
+            <div class="plot">Wait for plot...</div>
+          </div>
+        </div>
+        <!-- ends here -->
+      </div>
+
+      <!-- <div id="trailer-video-div"></div> -->
+    </div>
+
+    <a href="./index.html"
+      ><button id="return-to-home"><i class="fas fa-home"></i></button
+    ></a>
+
+    <!-- js script tag -->
+    <script type="text/javascript" src="moviePageScript.js"></script>
+  </body>
+</html>
